@@ -1,16 +1,18 @@
 ;(function ($) {
 	'use strict';
 
-	// $(window).scroll(function (){
-	// 	const scrollValue = $(window).scrollTop();
-	// 	const header = $('.header')
-	//
-	// 	if(scrollValue > 180){
-	// 		header.addClass('is-scroll');
-	// 	}else{
-	// 		header.removeClass('is-scroll');
-	// 	}
-	// })
+	$(window).scroll(function (){
+		const scrollValue = $(window).scrollTop();
+		const Body = $('body');
+		const header = $('.header')
+
+		if(scrollValue > 180){
+			Body.addClass('is-scroll');
+
+		}else{
+			Body.removeClass('is-scroll');
+		}
+	})
 
 	const scrollDown = function(){
 		const textScroll = $('.text p').text();

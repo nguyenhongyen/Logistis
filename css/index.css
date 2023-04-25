@@ -25,12 +25,13 @@ header{
     position: relative;
 }
 
-.header.is-scroll{
+.is-scroll .header{
     position: fixed;
     top:0;
     left: 0;
     width: 100%;
     background-color: var(--white-color);
+    transition: var(--transition-75);
 }
 
 .header-menu{
@@ -39,31 +40,38 @@ header{
     align-items: center;
     justify-content: space-between;
 }
+.is-scroll .header-menu{
+    padding: 0;
+}
+.header-menu-right{
+    gap: 30px;
+}
 
 .nav-menu{
     margin-bottom: 0;
     display:flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 15px;
     background-color:rgb(255 255 255 / 8%);
     border-radius: var(--rounded-full);
-    padding:15px 20px;
+    padding:12px;
 }
 .nav-menu > li{
     position: relative;
-    padding: 10px 20px;
-    border-radius: var(--rounded-full);
-   transition: var(--transition-all);
+    margin: 0 5px;
+
 }
-.nav-menu > li:not(:first-child):hover{
+.nav-menu > li:not(:first-child):hover a{
     background-color: var(--theme-color);
 }
-.nav-menu > li:not(:first-child)::before{
+.is-scroll .nav-menu > li:not(:first-child):hover a{
+   color:var(--white-color);
+}
+.nav-menu > li:not(:last-child)::before{
     position: absolute;
     font-family: "Font Awesome 5 Pro";
     content: "\f111";
-    left:0;
+    right:-10px;
     top: 50%;
     transform: translate(-50%,-50%);
     font-weight: 700;
@@ -71,18 +79,31 @@ header{
     font-size: 4px;
     color: rgba(255, 255, 255, 0.34);
 }
+.is-scroll .nav-menu > li::before{
+    color:var(--text-gray-700);
+}
 
 .nav-menu > li:hover .nav-menu__link{
     color:var(--white-color);
 }
+.is-scroll .nav-menu > li .nav-menu__link{
+    color:var(--text-gray-700);
+}
 .nav-menu__link{
     text-transform: uppercase;
-    padding: 20px 0;
+    padding:12px 20px;
     color:var(--white-color);
     font-weight: 700;
     position: relative;
+display: block;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: var(--rounded-full);
     transition: var(--transition-all);
-
+    margin:  0 3px;
+}
+.is-scroll .nav-menu__link{
+    padding: 12px 15px;
 }
 .nav-menu__home{
     color:var(--theme-color);
@@ -101,6 +122,21 @@ header{
     transition: var(--transition-all);
     cursor: pointer;
 }
+.header-menu__item{
+    position: relative;
+}
+.is-scroll .header-menu__item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.is-scroll .search-form{
+    width: 48px;
+    height: 48px;
+    background-color: var(--theme-color);
+    color:var(--bs-white);
+    font-size: var(--text-lg);
+}
 
 .language{
     cursor: pointer;
@@ -117,6 +153,12 @@ header{
     bottom:-15px;
     left:0;
     transition: var(--transition-all);
+}
+.is-scroll .language{
+   bottom: 3px;
+    left: -30px;
+    background-color: var(--theme-color);
+    color:var(--bs-white);
 }
 
 .search-form:hover,
