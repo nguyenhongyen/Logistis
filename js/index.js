@@ -6,7 +6,7 @@
 		const Body = $('body');
 		const header = $('.header')
 
-		if(scrollValue > 170){
+		if(scrollValue > 130){
 			Body.addClass('is-scroll');
 
 		}else{
