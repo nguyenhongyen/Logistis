@@ -61,6 +61,15 @@
 	}
 
 
+	const linkBlog = function(){
+		const textScroll = $('.link-blog__text p').text();
+		const textArr = textScroll.split('')
+		$.each(textArr, function (i, char) {
+			$('.link-blog__text p').hide()
+			$('.link-blog__text').append(`<span style="transform: rotate(${i * 12}deg)">${char}</span>`);
+		});
+	}
+
 
 	$(function () {
 		scrollDown();
@@ -68,6 +77,7 @@
 		repeatTextOne();
 		repeatTextTwo();
 		repeatTextThree();
+		linkBlog();
 
 	})
 

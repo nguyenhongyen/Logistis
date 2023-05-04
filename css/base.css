@@ -42,6 +42,7 @@
     --text-5xl: calc(var(--text-ratio) * 2.125);
     --text-6xl: calc(var(--text-ratio) * 2.25);
     --text-7xl: calc(var(--text-ratio) * 2.5);
+    --text-8xl: calc(var(--text-ratio) * 2.75);
 
     --spacing-ratio: 1rem;
     --spacing-xxs: calc(var(--spacing-ratio) * 0.125);

@@ -41,13 +41,18 @@ tl1.to('#repeat-text-three', {
 
 
 
-
-var rotate = gsap.timeline({
-    scrollTrigger:{
+gsap.to(".scroll__text", {
+    scrollTrigger: {
         trigger: ".scroll__text",
-        rotation: 360,
-        duration: 1,
-        repeat: -1,
-        ease: "linear"
-    }
-})
+        scrub: 1,
+        start: 'center center',
+        end: '+=5000',
+        markers:true,
+        repeat: -1
+    },
+    rotation: 1440,
+    duration: 360,
+    ease: "none",
+
+});
+
