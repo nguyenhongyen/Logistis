@@ -39,8 +39,6 @@ tl1.to('#repeat-text-three', {
 })
 
 
-
-
 gsap.to(".scroll__text", {
     scrollTrigger: {
         trigger: ".scroll__text",
@@ -55,4 +53,18 @@ gsap.to(".scroll__text", {
     ease: "none",
 
 });
+
+tl1.to(".section-blog",5,{x:-window.innerWidth})
+    // .from(".section-blog__one .section-image-left",5,{delay:1.2,y:100})
+    .to(".section-blog",5,{x:-window.innerWidth * 2})
+    .to(".section-blog",5,{x:-window.innerWidth * 3})
+
+ScrollTrigger.create({
+    animation:tl1,
+    trigger:".section-blog",
+    start:"center center",
+    end:"+=5000",
+    scrub:1,
+    pin:true
+})
 

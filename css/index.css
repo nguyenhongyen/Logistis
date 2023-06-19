@@ -549,6 +549,17 @@ position: relative;
 /* ==============================
          section-blog
  ================================*/
+.section-blog__wrap{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.section-blog__wrap .section-slide{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
 .section-blog__heading{
     font-size: var(--text-8xl);
     font-weight: 500;
