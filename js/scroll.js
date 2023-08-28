@@ -55,15 +55,21 @@ gsap.to(".scroll__text", {
 });
 
 tl1.to(".section-blog",5,{x:-window.innerWidth})
-    // .from(".section-blog__one .section-image-left",5,{delay:1.2,y:100})
+    .from(".section-blog__one .section-image-left",1, {opacity:0,y:100},{y: 0})
+    .from(".section-blog__one .section-image-right",1, {opacity:0,y:-100},{y: 0})
     .to(".section-blog",5,{x:-window.innerWidth * 2})
-    .to(".section-blog",5,{x:-window.innerWidth * 3})
+     .from(".section-blog__two .section-image-left",2, {opacity:0,x:-100},{x:0})
+      .from(".section-blog__two .section-image-right",2, {opacity:0,x:100},{x:0})
+     .to(".section-blog",5,{x:-window.innerWidth * 3})
+     .from(".section-blog__three .section-image-left",5,{opacity:0},{opacity:1})
+      .from(".section-blog__three .section-image-right",5, {opacity:0,y:100},{y: 0})
+      .from(".section-blog__four .section-blog__image",6, {opacity:0,scale:1},{scale:2})
 
 ScrollTrigger.create({
     animation:tl1,
     trigger:".section-blog",
     start:"center center",
-    end:"+=5000",
+    end: '+=3000',
     scrub:1,
     pin:true
 })
