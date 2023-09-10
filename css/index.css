@@ -638,3 +638,29 @@ position: relative;
     margin-right: 140px;
     margin-top:30px;
 }
+
+/*=======================================
+             section-article
+============================================*/
+.section-article__title{
+    text-transform: uppercase;
+    font-size: var(--text-7xl);
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.section-article__text{
+    color:var(--bs-gray-600);
+}
+.section-article__gird{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+.gird-item__image{
+    border-radius: var(--rounded-lg);
+}
+
+.gird-item__image .image{
+    width: 100% !important;
+    height: auto!important;
+}

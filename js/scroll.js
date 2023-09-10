@@ -45,7 +45,6 @@ gsap.to(".scroll__text", {
         scrub: 1,
         start: 'center center',
         end: '+=5000',
-        markers:true,
         repeat: -1
     },
     rotation: 1440,
